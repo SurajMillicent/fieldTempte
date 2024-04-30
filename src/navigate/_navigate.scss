@@ -1,0 +1,17 @@
+// Navigate.scss
+
+.flex {
+    display: flex;
+  
+    .sidebar {
+      // Define styles for the sidebar
+      flex: 0 0 250px; // Example width, adjust as needed
+    }
+  
+    .content {
+      // Define styles for the content area
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
