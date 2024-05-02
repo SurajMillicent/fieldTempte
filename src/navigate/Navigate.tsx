@@ -24,6 +24,41 @@ const Navigate = () => {
         <Sidebar />
       </div>
       <div className="content">
+        <samp>
+          {` <div className="form-input">
+            <input id={label} placeholder={label} {...rest} />
+            <label htmlFor={label}>{label}</label>
+          </div> <div className="form-input">
+          <input id={label} placeholder={label} {...rest} />
+          <label htmlFor={label}>{label}</label>
+        </div>`}
+        </samp>
+        <hr></hr>
+        <pre style={{backgroundColor:"beige"}}>
+          {`
+          <div className="form-input">
+            <input id={label} placeholder={label} {...rest} />
+            <label htmlFor={label}>{label}</label>
+          </div> 
+          <div className="form-input">
+             textarea:focus ~ .floating-label,
+          textarea:not(:placeholder-shown) ~ .floating-label,
+          input:not(:focus):valid ~ .floating-label {
+              // padding: 12px;
+              color: #888 !important;
+              top: 0px;
+              left: 10px;
+              transform: translateY(-50%);
+              transition: 0.1s;
+              padding: 4px;
+              letter-spacing: 0.25px !important;
+              font-size: 10px;
+              opacity: 1;
+              background: linear-gradient(180deg, rgba(255, 255, 255, 1) 60%, rgba(247, 247, 247, 0) 40%);
+              }
+
+          `}
+        </pre>
         <Routes>
           <Route path="/input" element={<Input label={"Name"} />} />
           <Route path="/text-area" element={<TextArea />} />
